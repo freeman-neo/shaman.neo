@@ -3,16 +3,33 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title>shaman</title>
+    <title>C/C++ Language</title>
 </head>
 <body>
-<h3>필요한 함수</h3>
+<h3>Requirement</h3>
 <ul>
-    <li>일차함수</li>
-    <li>이차함수</li>
-    <li>이차함수</li>
-    <li>이차함수</li>
+    <li>포인터</li>
+    <li><a href="https://docs.microsoft.com/en-us/cpp/c-runtime-library/reference/malloc?view=msvc-160">malloc</a></li>
+    <li><a href="https://docs.microsoft.com/en-us/cpp/c-runtime-library/reference/free?view=msvc-160">free</a></li>
 </ul>
+    <h3>Function List</h3>
+    <ul>
+        <li>
+            char *StringCopy(char *s)<br />
+            char *s = StringCopy("123") -> s = 123<r />
+            char *s = StringCopy("ABCDEFG") -> s = ABCDEFG<br/>
+        </li>
 
+        <li>
+            int StringLength(char *s)<br />
+            int length = StringLength("123") -> length = 3<br />
+            int length = StringLength("ABCDEFG") -> length = 7
+        </li>
+        <li>
+            char *StringAppend(char *s1, char *s2)<br />
+            char *s = StringAppend("123", "456") -> s = 123456<br />
+            char *s = StringAppend("ABCDEFG", "123") -> s = ABCDEFG123<br />
+        </li>
+    </ul>
 </body>
 </html>
