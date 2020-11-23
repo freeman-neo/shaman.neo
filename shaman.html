@@ -17,7 +17,7 @@
         <li>
             char *StringCopy(char *s)<br />
             char *s = StringCopy("123") -> s = 123<r />
-            char *s = StringCopy("ABCDEFG") -> s = ABCDEFG<br/>
+            char *s = StringCopy("ABCDEFG") -> s = ABCDEFG<br />
         </li>
 
         <li>
@@ -29,6 +29,27 @@
             char *StringAppend(char *s1, char *s2)<br />
             char *s = StringAppend("123", "456") -> s = 123456<br />
             char *s = StringAppend("ABCDEFG", "123") -> s = ABCDEFG123<br />
+        </li>
+        <li>
+            bool StringCompare(char *s1, char *s2)<br />
+            bool same = StringCompare("123", "456") -> same = false<br />
+            bool same = StringCompare("123", "123") -> same = true<br />
+        </li>
+        <li>
+            bool StringReverse(char *s1, char *s2)<br />
+            char *s = StringReverse("123") -> s = 321<br />
+        </li>
+        <li>
+            char *s = StringLeft(char *s, int length)<br />
+            char *s = StringLeft("123456", 3) -> s = 123<br />
+            char *s = StringLeft("123456", 1) -> s = 1<br />
+            char *s = StringLeft("123456", 8) -> s = 123456<br />
+        </li>
+        <li>
+            char *s = StringRight(char *s, int length)<br />
+            char *s = StringRight("123456", 3) -> s = 456<br />
+            char *s = StringRight("123456", 1) -> s = 6<br />
+            char *s = StringRight("123456", 8) -> s = 123456<br />
         </li>
     </ul>
 </body>
