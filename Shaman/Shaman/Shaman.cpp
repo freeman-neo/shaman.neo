@@ -7,11 +7,13 @@
 
 int main()
 {
-    const char *input = "abc" ;
-    
-    const int length = StringLength("123") ;
-    const char *output = StringCopy("abc", length) ;
+    const int Length = StringLength("123") ;
+    const char *Output = StringCopy("abc", Length) ;
+     
     const char *s1 = StringAppend("ABCDEFG", "123") ;
+
+    delete[] Output ; 
+    delete[] s1 ; 
     
     return 0 ;
 }
