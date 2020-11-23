@@ -1,6 +1,6 @@
 #pragma once
 
-const char *StringCopy(const char *s) ;
+const char *StringCopy(const char *s, const int length) ;
 
 const int StringLength(const char *s) ;
 
