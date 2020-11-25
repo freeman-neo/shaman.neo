@@ -11,3 +11,5 @@ const char *StringReverse(const char *s) ;
 const char *StringLeft(const char *s) ; 
 
 const char *StringRight(const char *s) ; 
+
+bool StringCompare() ; 

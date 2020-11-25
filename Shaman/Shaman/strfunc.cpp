@@ -132,3 +132,46 @@ const char *StringRight(const char *s)
 
     return Temp ;
 }
+
+bool StringCompare() 
+{
+    const char *FirString = "123" ; 
+    const char *SecString = "123" ; 
+    int Length = StringLength(FirString) ; 
+    int Tnum = 0 ;
+    int Fnum = 0 ;  
+    
+
+    /*
+    printf("FirstString : \n") ; 
+    scanf_s("%s", FirString) ; 
+    printf("SecondString : \n") ; 
+    scanf_s("%s", SecString) ;
+    */
+   
+    for (int i = 0 ; i < Length ; i++)
+    {
+        if (FirString[i] != SecString[i])
+        {
+            Fnum++ ;     
+        }
+        else 
+        {
+            Tnum++ ; 
+        }
+    }
+
+    if (Fnum == Length)
+    {
+        return false ;     
+    }
+    else 
+    {
+        return true ; 
+    }
+
+}
+
+
+
+    
