@@ -6,14 +6,15 @@
     <title>C/C++ Language</title>
 </head>
 <body>
-<h3>Requirement</h3>
-<ul>
-    <li>포인터</li>
-    <li><a href="https://docs.microsoft.com/en-us/cpp/c-runtime-library/reference/malloc?view=msvc-160">malloc</a></li>
-    <li><a href="https://docs.microsoft.com/en-us/cpp/c-runtime-library/reference/free?view=msvc-160">free</a></li>
-    <li><a href="https://docs.microsoft.com/ko-kr/cpp/c-runtime-library/reference/toupper-toupper-towupper-toupper-l-towupper-l?view=msvc-160">toupper, tolower</a></li>
-</ul>
-    <h3>Function List</h3>
+    <h3>Requirement</h3>
+    <ul>
+        <li>포인터</li>
+        <li><a href="https://docs.microsoft.com/en-us/cpp/c-runtime-library/reference/malloc?view=msvc-160">malloc</a></li>
+        <li><a href="https://docs.microsoft.com/en-us/cpp/c-runtime-library/reference/free?view=msvc-160">free</a></li>
+        <li><a href="https://docs.microsoft.com/ko-kr/cpp/c-runtime-library/reference/toupper-toupper-towupper-toupper-l-towupper-l?view=msvc-160">toupper, tolower</a></li>
+        <li><a href="https://docs.microsoft.com/en-us/cpp/c-runtime-library/reference/fopen-wfopen?f1url=%3FappId%3DDev16IDEF1%26l%3DEN-US%26k%3Dk(FILEFUNC%252Ffopen);k(fopen);k(DevLang-C%252B%252B);k(TargetOS-Windows)%26rd%3Dtrue&view=msvc-160">fopen, fread, fwrite, fclose</a></li>
+    </ul>
+    <h3>String Function List</h3>
     <ul>
         <li>
             char *StringCopy(char *s)<br />
@@ -63,6 +64,30 @@
 
         <li>
             bool StringAlloc(int length, char **buffer)<br />
+        </li>
+    </ul>
+
+    <h3>Flie Function List</h3>
+    <ul>
+        <li>
+            FILE *FileOpen(char *name)<br />
+            char *s = "\r\n" ;<br />
+            fwrite(s, 2, 1, stream) ;
+        </li>
+        <li>
+            bool FileWriteString(FILE *stream, char *value)<br />
+        </li>
+        <li>
+            void FileClose(FILE *stream)<br />
+        </li>
+        <li>
+            bool FileWriteChar(FILE *stream, char value)<br />
+        </li>
+        <li>
+            bool FileWriteInt(FILE *stream, int value)<br />
+        </li>
+        <li>
+            bool FileWriteFloat(FILE *stream, float value)<br />
         </li>
     </ul>
 </body>
