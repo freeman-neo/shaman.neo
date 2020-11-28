@@ -12,7 +12,6 @@ const char *StringLeft(const char *s) ;
 
 const char *StringRight(const char *s) ; 
 
-<<<<<<< HEAD
 bool StringCompare(char *FirString, char *SecString) ; 
 
 char *StringUpper(char *s) ;
@@ -20,6 +19,3 @@ char *StringUpper(char *s) ;
 char *StringLower(char *s) ; 
 
 bool StringCompareI(char *FirString, char *SecString) ;
-=======
-bool StringCompare() ; 
->>>>>>> 02f10aa5a31771720b3cdb66206a729a2a4e001b
