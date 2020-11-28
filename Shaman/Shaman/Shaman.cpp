@@ -63,6 +63,7 @@ int main()
 
     const int Length = StringLength("123") ;
     const char *Output = StringCopy("abc", Length) ;
+<<<<<<< HEAD
 
     char *FirString = new char[100] ;
     char *SecString = new char[100] ;
@@ -88,10 +89,19 @@ int main()
     std::cin >> SecString ;
     
     bool s5 = StringCompare(FirString, SecString) ;
+=======
+     
+    
+    
+    bool s5= StringCompare() ;
+    
+    
+>>>>>>> 02f10aa5a31771720b3cdb66206a729a2a4e001b
     const char *s1 = StringAppend("ABCDEFG", "123") ;
     const char *s2 = StringReverse("123") ; 
     const char *s3 = StringLeft("123456") ; 
     const char *s4 = StringRight("123456") ;
+    
 
     delete[] Output ; 
     delete[] s1 ; 
