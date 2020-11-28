@@ -78,7 +78,6 @@ void str_test()
     const char *s3 = StringLeft("123456") ;
     const char *s4 = StringRight("123456") ;
 
-
     delete[] Output ;
     delete[] s1 ;
     delete[] s2 ;
@@ -86,12 +85,21 @@ void str_test()
     delete[] s4 ;
     delete[] FirString ;
     delete[] SecString ;
-
 }
 
 void file_test()
 {
-    FileOpen() ;
+    char name[] = "C:\\projects\\Hello.txt" ; 
+    int value = 10 ; 
+    FILE *stream = FileOpen(name) ;
+    
+    FileWriteString(stream, "Thank You") ;
+    FileWriteString(stream, "For") ;
+    FileWriteString(stream, "Your Mercy") ;
+
+    FileWriteInt(stream, value) ; 
+
+    FileClose(stream) ; 
 }
 
 int main()

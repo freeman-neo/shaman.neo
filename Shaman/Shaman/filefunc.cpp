@@ -1,18 +1,51 @@
 #include "filefunc.h"
-
-#define _CRT_SECURE_NO_WARNINGS
-
+#include "strfunc.h"
 #include <stdio.h>
 
-
-void FileOpen()
+FILE *FileOpen(char *name) 
 {
-    FILE *stream = nullptr ;
-    stream = fopen("C:\\Users\\shaman\\Documents\\shaman.neo\\hello.txt", "r+") ;
+    FILE *stream = fopen(name, "w") ; 
+    return stream ;
+}
 
-    char s[128] ;
-    fread(s, 128, 1, stream) ;
-    s[0] = 'A' ;
-    fwrite(s, 13, 1, stream) ;
-    fclose(stream) ;
+bool FileWriteString(FILE *stream, const char *value) 
+{
+    int Length = StringLength(value) ; 
+    const char *br = "\r\n" ; 
+    size_t size ;
+    
+    size = fwrite(value, Length, 1, stream) ;
+    fwrite(br, 2, 1, stream) ; 
+
+    return (size == 0) ? false : true ;
+}
+
+bool FileWriteInt(FILE *stream, int value)
+{
+    size_t size ; 
+    size = fwrite(&value, 4, 1, stream) ; 
+    
+    return(size == 0) ? false : true ; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+void FileClose(FILE *stream)
+{
+    fclose(stream) ; 
 }
