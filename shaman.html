@@ -11,6 +11,7 @@
     <li>포인터</li>
     <li><a href="https://docs.microsoft.com/en-us/cpp/c-runtime-library/reference/malloc?view=msvc-160">malloc</a></li>
     <li><a href="https://docs.microsoft.com/en-us/cpp/c-runtime-library/reference/free?view=msvc-160">free</a></li>
+    <li><a href="https://docs.microsoft.com/ko-kr/cpp/c-runtime-library/reference/toupper-toupper-towupper-toupper-l-towupper-l?view=msvc-160">toupper, tolower</a></li>
 </ul>
     <h3>Function List</h3>
     <ul>
@@ -46,10 +47,22 @@
             char *s = StringLeft("123456", 8) -> s = 123456<br />
         </li>
         <li>
-            char *s = StringRight(char *s, int length)<br />
-            char *s = StringRight("123456", 3) -> s = 456<br />
-            char *s = StringRight("123456", 1) -> s = 6<br />
-            char *s = StringRight("123456", 8) -> s = 123456<br />
+            char *s = StringUpper(char *s)<br />
+            char *s = StringUpper("abCd") -> s = ABCD<br />
+        </li>
+        <li>
+            char *s = StringLower(char *s)<br />
+            char *s = StringLower("AbCD") -> s = abcd<br />
+        </li>
+
+        <li>
+            bool StringCompareI(char *s1, char *s2)<br />
+            bool same = StringCompare("abc", "def") -> same = false<br />
+            bool same = StringCompare("abc", "ABC") -> same = true<br />
+        </li>
+
+        <li>
+            bool StringAlloc(int length, char **buffer)<br />
         </li>
     </ul>
 </body>
