@@ -9,6 +9,9 @@ FILE *FileOpen(char *name) ;
 
 bool FileWriteString(FILE *stream, const char *value) ; 
 bool FileWriteInt(FILE *stream, int value) ; 
+bool FileWriteFloat(FILE *stream, float value) ; 
+bool FileWriteChar(FILE *stream, char value) ; 
+bool FileWriteBool(FILE *stream, bool value) ; 
 
 void FileClose(FILE *stream) ; 
 
