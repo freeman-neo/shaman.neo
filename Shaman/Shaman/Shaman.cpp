@@ -39,20 +39,15 @@ void str_test()
     if (result == 1)
     {
         delete[] p1 ;
-        ///
     }
     else
     {
         std::cout << "error" ;
     }
-
     const int Length = StringLength("123") ;
     const char *Output = StringCopy("abc", Length) ;
-
     char *FirString = new char[100] ;
     char *SecString = new char[100] ;
-
-
     std::cout << "enter string: " ;
     std::cin >> FirString ;
     std::cout << "enter string: " ;
@@ -94,17 +89,13 @@ void file_test()
     const char FileName2[] = "C:\\projects\\World.txt" ;
     int Ivalue = 10 ; 
     char Cvalue = 'A'; 
-    float Fvalue = 3.141592 ; 
+    float Fvalue = 3.141592f ; 
     bool Bvalue ; 
     FILE *stream = FileOpen(name) ;
-
-
-    
     FileWriteString(stream, "Hello World") ;
     FileWriteString(stream, "Thank You") ;
     FileWriteString(stream, "For") ;
     FileWriteString(stream, "Your Mercy") ;
-
     FileWriteInt(stream, Ivalue) ; 
     FileWriteFloat(stream, Fvalue) ;
     Bvalue = FileWriteChar(stream, Cvalue) ;
@@ -112,8 +103,6 @@ void file_test()
     FileClose(stream) ; 
 
     FileCopy(FileName1, FileName2) ; 
-     
-
 }
 
 int main()

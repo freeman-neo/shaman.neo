@@ -71,13 +71,9 @@ bool FileCopy(const char *FileName1, const char *FileName2)
     char buffer[1] ;
     size_t size = 1 ; 
     
-    while (size = 1)
+    while (size == 1)
     {
         size = fread(buffer, 1, 1, File1) ; 
-        if (size == 0)
-        {
-            break ; 
-        }
         fwrite(buffer, 1, 1, File2) ;
     }
     fclose(File1) ;
