@@ -94,7 +94,7 @@ void file_test()
     const char FileName2[] = "C:\\projects\\World.txt" ;
     int Ivalue = 10 ; 
     char Cvalue = 'A'; 
-    float Fvalue = 3.141592 ; 
+    float Fvalue = 3.14f ;
     bool Bvalue ; 
     FILE *stream = FileOpen(name) ;
 
