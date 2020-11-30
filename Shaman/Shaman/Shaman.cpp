@@ -90,12 +90,17 @@ void str_test()
 void file_test()
 {
     char name[] = "C:\\projects\\Hello.txt" ; 
+    const char FileName1[] = "C:\\projects\\Hello.txt" ;
+    const char FileName2[] = "C:\\projects\\World.txt" ;
     int Ivalue = 10 ; 
     char Cvalue = 'A'; 
     float Fvalue = 3.141592 ; 
     bool Bvalue ; 
     FILE *stream = FileOpen(name) ;
+
+
     
+    FileWriteString(stream, "Hello World") ;
     FileWriteString(stream, "Thank You") ;
     FileWriteString(stream, "For") ;
     FileWriteString(stream, "Your Mercy") ;
@@ -105,6 +110,10 @@ void file_test()
     Bvalue = FileWriteChar(stream, Cvalue) ;
     FileWriteBool(stream, Bvalue) ; 
     FileClose(stream) ; 
+
+    FileCopy(FileName1, FileName2) ; 
+     
+
 }
 
 int main()

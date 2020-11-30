@@ -47,14 +47,12 @@ bool FileWriteChar(FILE *stream, char value)
     sprintf(buffer, "%c", value) ;
     size = FileWriteString(stream, buffer) ;
 
-    return(size == 1) ? false : true ;
+    return(size == 0) ? false : true ;
 }
 
 bool FileWriteBool(FILE *stream, bool value)
 {
-     
-    
-    if (value == 1)
+    if (value)
     {
         FileWriteString(stream, "true") ;
     }
@@ -66,20 +64,27 @@ bool FileWriteBool(FILE *stream, bool value)
     return 0 ;
 }
 
+bool FileCopy(const char *FileName1, const char *FileName2)
+{
+    FILE *File1 = fopen(FileName1, "r") ;
+    FILE *File2 = fopen(FileName2, "w") ;
+    char buffer[1] ;
+    size_t size = 1 ; 
+    
+    while (size = 1)
+    {
+        size = fread(buffer, 1, 1, File1) ; 
+        if (size == 0)
+        {
+            break ; 
+        }
+        fwrite(buffer, 1, 1, File2) ;
+    }
+    fclose(File1) ;
+    fclose(File2) ; 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+    return(size == 1) ? false : true ; 
+}
 
 void FileClose(FILE *stream)
 {
