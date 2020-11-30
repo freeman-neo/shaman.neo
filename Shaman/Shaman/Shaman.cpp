@@ -105,10 +105,22 @@ void file_test()
     FileCopy(FileName1, FileName2) ; 
 }
 
-int main()
+void copy_test()
 {
+}
+
+//  int main()
+int main(int argc, char *argv[])
+{
+    //  FileCopy(argv[1], argv[2]) ;
+
     //  str_test() ;
-    file_test() ;
+    //  file_test() ;
+    std::cout << argc << std::endl ;
+    for (int i = 0; i < argc; i++)
+    {
+        std::cout << argv[i] << std::endl ;
+    }
     return 0 ;
 }
 
