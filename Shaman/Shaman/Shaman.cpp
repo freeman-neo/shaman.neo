@@ -112,15 +112,15 @@ void copy_test()
 //  int main()
 int main(int argc, char *argv[])
 {
-    //  FileCopy(argv[1], argv[2]) ;
-
     //  str_test() ;
     //  file_test() ;
-    std::cout << argc << std::endl ;
-    for (int i = 0; i < argc; i++)
+
+    if (argc == 3)
     {
-        std::cout << argv[i] << std::endl ;
+        FileCopy(argv[1], argv[2]) ; 
+        return 0 ; 
     }
+    std::cout << "error" << std::endl ;  
     return 0 ;
 }
 
