@@ -27,6 +27,9 @@
     <ClCompile Include="Filefuncex.cpp">
       <Filter>Header Files\Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="File.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="strfunc.h">
@@ -35,7 +38,11 @@
     <ClInclude Include="filefunc.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="Filefuncex.h">
+=======
+    <ClInclude Include="File.h">
+>>>>>>> 39f531f6946c37cb38d72ee933e2d72c784a12fd
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

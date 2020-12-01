@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{6fdc29de-6252-4604-a1ae-f9a8be88d9b9}</ProjectGuid>
-    <RootNamespace>Shaman</RootNamespace>
+    <ProjectGuid>{9cb0e142-88bc-4532-9ceb-3b14c8bb4f1d}</ProjectGuid>
+    <RootNamespace>Shape</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -112,7 +112,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <WarningLevel>Level4</WarningLevel>
+      <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
@@ -139,17 +139,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="File.cpp" />
-    <ClCompile Include="filefunc.cpp" />
-    <ClCompile Include="Filefuncex.cpp" />
-    <ClCompile Include="Shaman.cpp" />
-    <ClCompile Include="strfunc.cpp" />
+    <ClCompile Include="Line.cpp" />
+    <ClCompile Include="Shape.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="File.h" />
-    <ClInclude Include="filefunc.h" />
-    <ClInclude Include="Filefuncex.h" />
-    <ClInclude Include="strfunc.h" />
+    <ClInclude Include="Line.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
