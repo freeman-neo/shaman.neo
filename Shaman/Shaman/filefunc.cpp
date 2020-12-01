@@ -2,11 +2,13 @@
 #include "strfunc.h"
 #include <stdio.h>
 
+/*
 FILE *FileOpen(char *name) 
 {
     FILE *stream = fopen(name, "w") ; 
     return stream ;
 }
+*/
 
 bool FileWriteString(FILE *stream, const char *value) 
 {

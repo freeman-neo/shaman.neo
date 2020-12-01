@@ -140,11 +140,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="filefunc.cpp" />
+    <ClCompile Include="Filefuncex.cpp" />
     <ClCompile Include="Shaman.cpp" />
     <ClCompile Include="strfunc.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="filefunc.h" />
+    <ClInclude Include="Filefuncex.h" />
     <ClInclude Include="strfunc.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

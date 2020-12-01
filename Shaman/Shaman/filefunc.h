@@ -5,7 +5,7 @@
 
 #include <stdio.h> 
 
-FILE *FileOpen(char *name) ; 
+FILE *FileOpen(const char *name) ; 
 
 bool FileWriteString(FILE *stream, const char *value) ; 
 bool FileWriteInt(FILE *stream, int value) ; 

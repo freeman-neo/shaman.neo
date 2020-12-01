@@ -3,8 +3,9 @@
 
 #include <iostream>
 #include "strfunc.h"
-#include "filefunc.h"
+#include "filefuncex.h"
 #include "stdio.h"
+
 
 char *StringAlloc(int length)
 {
@@ -29,6 +30,7 @@ int StringAllocEx(int length, char **p1)
         return 0 ;
     }
     (*p1) = new char[length] ;
+    
     return 1 ;
 }
 
@@ -83,44 +85,40 @@ void str_test()
 }
 
 void file_test()
-{
-    char name[] = "C:\\projects\\Hello.txt" ; 
+{  
     const char FileName1[] = "C:\\projects\\Hello.txt" ;
     const char FileName2[] = "C:\\projects\\World.txt" ;
     int Ivalue = 10 ; 
     char Cvalue = 'A'; 
     float Fvalue = 3.141592f ; 
     bool Bvalue ; 
-    FILE *stream = FileOpen(name) ;
-    FileWriteString(stream, "Hello World") ;
-    FileWriteString(stream, "Thank You") ;
-    FileWriteString(stream, "For") ;
-    FileWriteString(stream, "Your Mercy") ;
-    FileWriteInt(stream, Ivalue) ; 
-    FileWriteFloat(stream, Fvalue) ;
-    Bvalue = FileWriteChar(stream, Cvalue) ;
-    FileWriteBool(stream, Bvalue) ; 
-    FileClose(stream) ; 
+    FILE *stream1 = FileOpen(FileName1) ; 
+    FILE *stream2 = FileOpen(FileName2) ;
+    FileWriteString("Hello World") ;
+    FileWriteString("Thank You") ;
+    FileWriteString("For") ;
+    FileWriteString("Your Mercy") ;
+    FileWriteInt(Ivalue) ;
+    FileWriteFloat(Fvalue) ;
+    Bvalue = FileWriteChar(Cvalue) ;
+    FileWriteBool(Bvalue) ;
+    FileClose() ;
 
-    FileCopy(FileName1, FileName2) ; 
+    //FileCopy(FileName1, FileName2) ; 
 }
 
-void copy_test()
-{
-}
-
-//  int main()
 int main(int argc, char *argv[])
 {
-    //  str_test() ;
-    //  file_test() ;
+    file_test() ; 
 
+    /*
     if (argc == 3)
     {
         FileCopy(argv[1], argv[2]) ; 
         return 0 ; 
     }
     std::cout << "error" << std::endl ;  
+    */
     return 0 ;
 }
 
