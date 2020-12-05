@@ -1,72 +1,74 @@
-#include "filefuncex.h"
+#include "File.h"
 #include "strfunc.h"
+
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
-FILE *stream = nullptr ;
 
-FILE *FileOpen(const char *name)
+FILE *File::Open(const char *name)
 {
-    stream = fopen(name, "w") ;
-    return stream ;
+    m_stream = fopen(name, "w") ;
+    
+    return m_stream ;
 }
 
-bool FileWriteString(const char *value)
+bool File::WriteString(const char *value)
 {
     int Length = StringLength(value) ;
     const char *br = "\r\n" ;
     size_t size ;
-    size = fwrite(value, Length, 1, stream) ;
-    fwrite(br, 2, 1, stream) ;
+    size = fwrite(value, Length, 1, m_stream) ;
+    fwrite(br, 2, 1, m_stream) ;
 
     return (size == 0) ? false : true ;
 }
 
-bool FileWriteInt(int value)
+bool File::WriteInt(int value)
 {
     char buffer[100] ;
 
     size_t size ;
     sprintf(buffer, "%d", value) ;
-    size = FileWriteString(buffer) ;
+    size = WriteString(buffer) ;
 
     return(size == 0) ? false : true ;
 }
-bool FileWriteFloat(float value)
+bool File::WriteFloat(float value) 
 {
     char buffer[100] ;
 
     size_t size ;
     sprintf(buffer, "%f", value) ;
-    size = FileWriteString(buffer) ;
+    size = WriteString(buffer) ;
 
     return(size == 0) ? false : true ;
 }
-bool FileWriteChar(char value)
+bool File::WriteChar(char value)
 {
     char buffer[100] ;
 
     size_t size ;
     sprintf(buffer, "%c", value) ;
-    size = FileWriteString(buffer) ;
+    size = WriteString(buffer) ;
 
     return(size == 0) ? false : true ;
 }
 
-bool FileWriteBool(bool value)
+bool File::WriteBool(bool value)
 {
     if (value)
     {
-        FileWriteString("true") ;
+        WriteString("true") ;
     }
     else
     {
-        FileWriteString("false") ;
+        WriteString("false") ;
     }
 
     return 0 ;
 }
 
-void FileClose()
+void File::Close()
 {
-    fclose(stream) ;
+    fclose(m_stream) ;
 }
