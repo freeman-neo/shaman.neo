@@ -3,9 +3,13 @@
 #include "Listfunc.h"
 #include <stdio.h>
 #include <iostream>
+#include <crtdbg.h>
 
 int main()
 {
+    _CrtMemState ms ;
+    _CrtMemCheckpoint(&ms) ; {
+
     List Listfunc ; 
     Data data ; 
     int count ;
@@ -24,4 +28,6 @@ int main()
 
     Listfunc.RemoveTail() ;    
     count = Listfunc.GetCount() ; 
+    
+    } _CrtMemDumpAllObjectsSince(&ms) ;
 }
