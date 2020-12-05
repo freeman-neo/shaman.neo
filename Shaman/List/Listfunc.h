@@ -23,6 +23,8 @@ class List
         void RemoveTail() ; 
         void RemoveHead() ; 
         int GetCount() ; 
+        void RemoveAll(int count) ; 
+
 };
 
 

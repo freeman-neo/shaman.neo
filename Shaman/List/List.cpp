@@ -29,5 +29,7 @@ int main()
     Listfunc.RemoveTail() ;    
     count = Listfunc.GetCount() ; 
     
+    Listfunc.RemoveAll(count) ; 
+
     } _CrtMemDumpAllObjectsSince(&ms) ;
 }

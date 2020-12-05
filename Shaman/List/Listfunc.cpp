@@ -43,7 +43,6 @@ void List::AddHead(Data data)
 void List::RemoveTail() 
 {
     Node *temp = m_head ; 
-    
     while (temp->next->next != nullptr)
     {
         temp = temp->next ;
@@ -53,27 +52,34 @@ void List::RemoveTail()
     temp->next = nullptr ;
 }
 
-
 void List::RemoveHead()
 {
     Node *temp = m_head ; 
-
     m_head = m_head->next ; 
     temp->next = nullptr ; 
     delete temp ; 
-
-
 }
+
 int List::GetCount() 
 {
     int count = 1 ; 
     Node *temp = m_head ;
-
     while (temp->next != nullptr)
     {
         temp = temp->next ;
         count++ ; 
     }
-
+    delete temp ; 
     return count ; 
+}
+
+void List::RemoveAll(int count)
+{
+    for (int i = 1 ; i < count ; i++)
+    {
+        Node *temp = m_head ;
+        m_head = m_head->next ;
+        temp->next = nullptr ;
+        delete temp ;
+    }
 }
