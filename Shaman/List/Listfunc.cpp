@@ -1,5 +1,27 @@
-#include "Listfunc.h"
+#define _CRT_SECURE_NO_WARNINGS 
 #include <stdio.h>
+#include <string.h>
+#include "Listfunc.h"
+#include "Stack.h"
+
+Data::Data()
+{
+    m_i = 0 ;
+    m_s = nullptr ; 
+}
+
+Data::Data(int i, const char *s)
+{
+    m_i = i ;
+    size_t size = strlen(s) + 1 ; 
+    m_s = new char[size] ; 
+    strcpy(m_s, s) ; 
+}
+
+Data::~Data()
+{
+    delete[] m_s ;
+}
 
 void List::AddTail(Data data)
 {
@@ -83,3 +105,5 @@ void List::RemoveAll(int count)
         delete temp ;
     }
 }
+
+

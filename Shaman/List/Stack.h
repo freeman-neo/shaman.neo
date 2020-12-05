@@ -1,10 +1,12 @@
 #pragma once
 
+#include <stdio.h>
 #include "Listfunc.h"
+
 
 class Stack : public List
 {
-    public :
+    public:
         void Push(Data data) ;
         Data Pop() ;
 } ;
